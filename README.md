@@ -29,6 +29,10 @@ Users should be able to:
 
 ### Screenshot
 
+![image](https://github.com/Nospiel-code/fm-newsletter-sign-up/assets/130290610/3b9d45bf-5948-42be-b9e3-408ef6a42cda)
+![image](https://github.com/Nospiel-code/fm-newsletter-sign-up/assets/130290610/1584e0dc-3007-43c6-aab0-336a05c55e29)
+
+
 
 ### Links
 
