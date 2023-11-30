@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type=image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+</head>
+
+<body class="flex items-center bg:white justify-center flex-col h-screen font-roboto md:bg-charcoalGrey">
+
+
+  <!-- Sign-up form start -->
+  <main data-wrapper class="my-auto">
+    <div data-card class="bg-white max-w-[375px] rounded-3xl md:flex md:flex-row-reverse md:max-w-[58rem] md:p-4">
+      <!-- Images -->
+      <div class="md:flex-1">
+        <img class="md:hidden" src="./images/illustration-sign-up-mobile.svg" alt="illustration with screen and tables">
+        <img class="hidden md:block" src="./images/illustration-sign-up-desktop.svg"
+          alt="illustration with screen and tables">
+      </div>
+
+      <!-- Information & Form -->
+      <div class="space-y-4 px-6 py-8 md:pr-16 md:pl-12 md:pt-[4.375rem] md:flex-1">
+        <h1 class="text-4xl text-darkSlateGrey font-bold md:text-newxl md:pb-4">Stay updated!</h1>
+        <p class="md:pb-2">Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul class="space-y-2 pb-4 md:space-y-3">
+          <li class="bg-[url(../images/icon-list.svg)] bg-no-repeat">
+            <p class="pl-8">Product discovery and building what matters</p>
+          </li>
+          <li class="bg-[url(../images/icon-list.svg)] bg-no-repeat">
+            <p class="pl-8">Measuring to ensure updates are a success</p>
+          </li>
+          <li class="bg-[url(../images/icon-list.svg)] bg-no-repeat">
+            <p class="pl-8">And much more!</p>
+          </li>
+        </ul>
+        <form data-form class="group" novalidate>
+
+          <div class="relative">
+            <label class="font-bold text-xs" for="email">Email address</label>
+            <input
+              class="peer block cursor-pointer mt-1 border-2 border-gray-300 p-3 rounded-md w-full hover:border-charcoalGrey invalid:[&:not(:placeholder-shown):not(:focus)]:text-tomato invalid:[&:not(:placeholder-shown):not(:focus)]:border-tomato invalid:[&:not(:placeholder-shown):not(:focus)]:bg-red-100"
+              id="email" name="email" type="email" placeholder="email@company.com" required
+              pattern="^[a-zA-Z0-9\._%+\-]+@[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,}$">
+            <span
+              class="absolute right-0 top-1.5 font-bold text-xs text-white peer-[&:not(:placeholder-shown):not(:focus):invalid]:text-tomato">
+              Valid email required</span>
+          </div>
+
+
+          <button
+            class="block cursor-pointer font-bold bg-darkSlateGrey text-white w-full rounded-md p-3 mt-5 hover:bg-gradient-to-r hover:from-grStart hover:to-grEnd hover:shadow-custom group-invalid:pointer-events-none"
+            type="submit">            
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Success message start -->
+
+    <template data-template>
+      <div class="flex flex-col h-full px-6 bg-white rounded-3xl md:h-auto md:p-10 md:max-w-[25rem] md:my-auto">
+        <div class="my-auto">
+          <img class="pb-8" src="./images/icon-success.svg" alt="checkmark icon">
+          <h1 class="text-4xl font-bold pb-4 md:text-5xl">Thanks for subscribing!</h1>
+          <p>
+            A confirmation email has been sent to <span class="font-bold"> {{ email }} </span>.
+            Please open it and click the button inside to confirm your subscription.
+          </p>
+
+        </div>
+        <button
+          class="block cursor-pointer font-bold bg-darkSlateGrey text-white w-full rounded-md p-3 mt-5 hover:bg-gradient-to-r hover:from-grStart hover:to-grEnd hover:shadow-custom md:mt-8"
+          onclick="location.reload()">
+          Dismiss message
+        </button>
+      </div>
+
+    </template>
+  </main>
+
+
+  <div class="text-white">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" class="underline" target="_blank">Frontend
+      Mentor</a>.
+    Coded by <a href="https://github.com/Nospiel-code" class="underline">Thomas Schütz</a>.
+  </div>
+  
+
+ <script src="./script.js"></script>
+</body>
+
+</html>
